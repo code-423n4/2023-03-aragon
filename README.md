@@ -249,7 +249,7 @@ We use Mythx for automated security testing within our [CI pipeline](https://git
 > ***Feedback:** The constructor on multiple contracts under `token/ERC20/governance` do call the initialize function on the implementation. Since the contract will be used on a proxy environment it is recommended to simply call `_disableInitializers` on the `constructor` which will lock the initialisation process on the implementation contract and will cost less gas than having to call the `initialize` function with all the arguments.*
 >
 
-![Code Snippet](https://asset.cloudinary.com/dacofvu8m/71626b57599e5b61b129eeae41670d5a)
+![Code Snippet](https://res.cloudinary.com/dacofvu8m/image/upload/v1677210561/Aragon%20CodeArena/UUPS_upgradeable_initializers_gjnjz1.png)
 
 **Response:** This is not possible, the way things are implemented and used.
 
@@ -266,7 +266,7 @@ The thing you mention about cheaper gas cost is correct, though in case of minim
 > ***Feedback:** We have seen that `GovernanceWrappedERC20` does create two internal functions (we haven't seen usage/implications yet), `_mint` and `_burn`. Those two functions are minting/burning on the wrapping token which can cause discrepancies and unpegging with what the actual user has on the underlaying token.*
 >
 
-![Logs screenshot](https://asset.cloudinary.com/dacofvu8m/e1469cde4aa32774ae137b35b9805c9a)
+![Logs screenshot](https://res.cloudinary.com/dacofvu8m/image/upload/v1677210553/Aragon%20CodeArena/Minting_burning_dmzt8f.png)
 
 **Response:** The reason why `GovernanceWrappedERC20` contains `_mint`/`burn` (note they are internal) isn't because of some hidden logic by Aragon. They're just there to compile the code, otherwise solidity is ambiguous. Take a look here - they also do the same: https://docs.openzeppelin.com/contracts/4.x/governance.
 
@@ -277,9 +277,9 @@ Since they're internal, it can't be called from outside. And `_mint` in the end 
 > ***Feedback:** In the current `PermissionManager` implementation - the `grant` function does call internally the `_grantWithCondition` using the `ALLOW_FLAG` address. The documentation states that it will be possible to grant permissions to any caller (`ANY_ADDR` on who) on a valid "where" address. However, when this condition is meet the `_grantWithCondition` will always revert with `ConditionNotPresentForAnyAddress`:*
 >
 
-![Code Snippet 1](https://asset.cloudinary.com/dacofvu8m/b0aec8bb841a18c87865a323b98f42cc)
+![Code Snippet 1](https://res.cloudinary.com/dacofvu8m/image/upload/v1677210557/Aragon%20CodeArena/Grant_with_condition_ANY_ADDR_1_xxlwnf.png)
 
-![Code Snippet 2](https://asset.cloudinary.com/dacofvu8m/1911304f89926422a6407abef43f17f9)
+![Code Snippet 2](https://res.cloudinary.com/dacofvu8m/image/upload/v1677210552/Aragon%20CodeArena/Grant_with_condition_ANY_ADDR_2_ihxfqq.png)
 
 **Response:** I think documentation is not updated, but will be getting updated soon today.
 
@@ -298,7 +298,7 @@ Reverting is important. We thought about it not to revert in that case and simpl
 > ***Feedback:** `PermissionManager`, the internal `_auth` function does check if you have the `permissionId` for the current contract (`address(this)`) and returns true if you do. That means that if i ever give a user x `permission` to a contract using `PermissionManager` this user will also have permission x over any `WHERE`:*
 >
 
-![Code Snippet](https://asset.cloudinary.com/dacofvu8m/5d6256794788f0e171a96b4376dee36b)
+![Code Snippet](https://res.cloudinary.com/dacofvu8m/image/upload/v1677210557/Aragon%20CodeArena/Auth_system_1_khuv3n.png)
 
 **Response:** So, the scenario -
 
@@ -333,7 +333,7 @@ This is one of the most important parts.
 The `_auth` check would always be treating any permission as `auth(ANY_ADDR, who, permission)` if the first argument is `!= address(this)` for this contract.*
 >
 
-![Code snippet](https://asset.cloudinary.com/dacofvu8m/c87ed85e179e5dd43ba59debf64005b8)
+![Code snippet](https://res.cloudinary.com/dacofvu8m/image/upload/v1677210556/Aragon%20CodeArena/Auth_system_2_pqcxdn.png)
 
 **Response:** We don't have `auth(where, PERMISSION1)` anywhere in `DAO` or in `PermissionManager`.
 
@@ -485,7 +485,7 @@ Note - that since `Admin` is non-upgradeable, thats why we think no `upgradeTo` 
 > ***Feedback:** From the contract alone perspective, there shouldn't be any issue on changing those methods to `virtual` and abstracting the contract.*
 >
 
-![Code Snippet](https://asset.cloudinary.com/dacofvu8m/a5f753967831847e82bb2ae9ecfcf1cd)
+![Code Snippet](https://res.cloudinary.com/dacofvu8m/image/upload/v1677210549/Aragon%20CodeArena/Contract_virtual_methods_dec0kt.png)
 
 > *The problem will be on the contracts actually using or overriding those methods. Take a look on the following example. You would expect anyone calling `test()` on `Test2` to revert, right?
 Because this is overriding the `Test` function which has the `doRevert` modifier. Well, it is not the case. The modifier is ignored since the overrIding function does have the `doRevert` modifier.
