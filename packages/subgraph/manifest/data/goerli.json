@@ -1,0 +1,21 @@
+{
+  "info": "# Do not edit subgraph.yaml,this is a generated file. \n# Instead, edit subgraph.placeholder.yaml and run: yarn manifest",
+  "network": "goerli",
+  "dataSources": {
+    "DAORegistry": {
+      "name": "DAORegistry",
+      "address": "0xC76852A44a823EBe6b8177aE18CeB6AB60EE0Ac7",
+      "startBlock": 8548226
+    },
+    "PluginRepoRegistry": {
+      "name": "PluginRepoRegistry",
+      "address": "0x18b8d69F286EE46EFf8FAB9A2707e8F6D4f6cDFe",
+      "startBlock": 8548226
+    },
+    "PluginSetupProcessor": {
+      "name": "PluginSetupProcessor",
+      "address": "0x5486F9c5F593f61344047CC696BD73E5a41F657A",
+      "startBlock": 8548226
+    }
+  }
+}
