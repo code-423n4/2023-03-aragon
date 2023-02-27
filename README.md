@@ -24,10 +24,9 @@ In scope, you will find all *Core and Framework Contracts*, as well as our plugi
 
 Additionally, you can find [here the addresses of the active contracts](https://github.com/aragon/osx/blob/develop/active_contracts.json) we have deployed to Goerli, Mumbai, Arbitrum-Rinkeby, and Rinkeby.
 
-<aside>
+
 💡 We’d like to bring special attention to the `PluginProcessor` contract which installs plugins into DAOs, as well as the `DAO` contract which holds all DAO assets.
 
-</aside>
 
 This section lists files that are in scope for auditing:
 
@@ -144,7 +143,7 @@ Plugins don’t have to follow a specific base, although we provide 3 potential 
 - [Plugin Cloneable](https://github.com/aragon/osx/blob/develop/packages/contracts/src/core/plugin/PluginCloneable.sol)
 - [Plugin UUPS Upgradeable](https://github.com/aragon/osx/blob/develop/packages/contracts/src/core/plugin/PluginUUPSUpgradeable.sol)
 
-— you can find more information about [plugin types here](https://devs-stg.aragon.org/docs/core/how-to-guides/plugin-development/implemention/plugin-types).
+— you can find more information about [plugin types here](https://devs-stg.aragon.org/docs/osx/how-to-guides/plugin-development/plugin-types).
 
 ### Upgrades
 
@@ -398,7 +397,7 @@ Basically, for plugins (not the `PluginRepo`), or any other contract, your POC w
 > *Then probably a suggestion would be to actually simplify those modifiers to already use `address(this)`, similar to what you have on the `DAO`.*
 >
 
-**Response:** you mean modifiers for `grantWithOrace`, `grant`, `revoke` , right?
+**Response:** you mean modifiers for `grantWithOracle`, `grant`, `revoke` , right?
 
 *The `auth` modifier under `PermissionManager` to already use `address(this)` instead of `where`? So only 1 parameter.*
 
@@ -592,7 +591,7 @@ When you do `prepareX`, we only store one thing only `bytes32` in order to avoid
     So, whatever `helpers` plugin installation deployed, it's important that the EXACT SAME ORDER is passed back to `prepareUpdate` so dev could feel safe the caller didn't maliciously changed `helpers` array while calling `prepareUpdate` of `PluginSetupProcessor`.
     Then it gets even interesting. `prepareUpdate` might have deployed more `helpers`,  so dev should update the `helpers` array and return it and this updated `helpers` array should be passed for the second update.
 
-    E.x. you update plugin to 2.0 which deployed `helper1`, `helper2`. Now, when you call `prepraeUpdate` from 2.0 to 3.0, you have to pass `helper1`, `helper2` otherwise it will fail. So you're passing things around.
+    E.x. you update plugin to 2.0 which deployed `helper1`, `helper2`. Now, when you call `prepareUpdate` from 2.0 to 3.0, you have to pass `helper1`, `helper2` otherwise it will fail. So you're passing things around.
 
 - Explanation of `EMPTY_ARRAY_HASH`
 
@@ -715,7 +714,7 @@ The above code addition just makes sure to pass helpers around.
 
 ### Multiple governance mechanisms
 
-> ***Feedback:** Can multiple governance voting system coexhist for a DAO?*
+> ***Feedback:** Can multiple governance voting system coexist for a DAO?*
 >
 
 **Response:** Yes
