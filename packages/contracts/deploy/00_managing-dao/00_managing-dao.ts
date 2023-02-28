@@ -1,6 +1,8 @@
 import {HardhatRuntimeEnvironment} from 'hardhat/types';
 import {DeployFunction} from 'hardhat-deploy/types';
 
+import {MANAGING_DAO_METADATA, uploadToIPFS} from '../helpers';
+
 /** NOTE:
  * Create a (Managing DAO) with no Plugin, to be the owner DAO for the framework, temporarily.
  */
@@ -8,7 +10,7 @@ import {DeployFunction} from 'hardhat-deploy/types';
 const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   console.log(`\nDeploying ManagingDao.`);
 
-  const {deployments, getNamedAccounts, ethers} = hre;
+  const {deployments, getNamedAccounts, ethers, network} = hre;
   const {deploy} = deployments;
   const {deployer} = await getNamedAccounts();
 
