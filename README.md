@@ -1,4 +1,4 @@
-# Aragon Contest Details
+# Aragon Protocol Contest Details
 
 - Total Prize Pool: $90,500 USDC
     - HM awards: $63,750 USDC
