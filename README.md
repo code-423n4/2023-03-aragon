@@ -1,16 +1,16 @@
 # Aragon Contest Details
 
-- **Total Prize Pool**: Sum of below awards
+- Total Prize Pool: $90,500 USDC
     - HM awards: $63,750 USDC
     - QA report awards: $7,500 USDC
     - Gas report awards: $3,750 USDC
     - Judge + presort awards: $15,000 USDC
     - Scout awards: $500 USDC
 - Join [C4 Discord](https://discord.gg/code4rena) to register
-- Submit findings [using the C4 form](https://code4rena.com/contests/2023-02-aragon-contest/submit)
+- Submit findings [using the C4 form](https://code4rena.com/contests/2023-03-aragon-contest/submit)
 - [Read our guidelines for more details](https://docs.code4rena.com/roles/wardens)
-- Starts February 23, 2023 20:00 UTC
-- Ends March 03, 2023 20:00 UTC
+- Starts March 03, 2023 20:00 UTC
+- Ends March 10, 2023 20:00 UTC
 
 ## Automated Findings / Publicly Known Issues
 
@@ -198,6 +198,31 @@ This section lists functions that are explicitly declared public or payable. Ple
 | Solidity Versions observed | 🧪 Experimental Features | 💰 Can Receive Funds | 🖥 Uses Assembly | 💣 Has Destroyable Contracts |
 | --- | --- | --- | --- | --- |
 | 0.8.17 |  | yes |  |  |
+
+
+## Scoping Details 
+```
+- If you have a public code repo, please share it here:  https://github.com/aragon/core/tree/develop/packages/contracts
+- How many contracts are in scope?:   50
+- Total SLoC for these contracts?:  3468
+- How many external imports are there?: 25 
+- How many separate interfaces and struct definitions are there for the contracts within scope?:  51
+- Does most of your code generally use composition or inheritance?:  Inheritance 
+- How many external calls?:   50
+- What is the overall line coverage percentage provided by your tests?:  60
+- Is there a need to understand a separate part of the codebase / get context in order to audit this part of the protocol?:  no 
+- Please describe required context:   n/a
+- Does it use an oracle?:  No
+- Does the token conform to the ERC20 standard?:  Yes
+- Are there any novel or unique curve logic or mathematical models?: n/a
+- Does it use a timelock function?:  Yes
+- Is it an NFT?: No
+- Does it have an AMM?: No  
+- Is it a fork of a popular project?:   false
+- Does it use rollups?:   No
+- Is it multi-chain?:  No
+- Does it use a side-chain?: No 
+```
 
 ## Tests
 
