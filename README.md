@@ -28,7 +28,7 @@ The [Aragon](https://aragon.org) OSx is a DAO framework enabling users to create
 
 In scope, you will find all *Core and Framework Contracts*, as well as our plugins.
 
-Additionally, you can find [here the addresses of the active contracts](https://github.com/aragon/osx/blob/develop/active_contracts.json) we have deployed to Goerli, and Mainnet.
+Additionally, you can find [here the addresses of the active contracts](https://github.com/aragon/osx/blob/develop/active_contracts.json) we have deployed to Goerli and Mainnet.
 
 
 💡 We’d like to bring special attention to the `PluginSetupProcessor` contract which installs plugins into DAOs, as well as the `DAO` contract which holds all DAO assets.
