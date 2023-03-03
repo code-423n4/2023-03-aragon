@@ -226,7 +226,7 @@ This section lists functions that are explicitly declared public or payable. Ple
 
 ## Tests
 
-You can find some [test DAOs here](https://github.com/aragon/osx/blob/develop/dummy_daos.json) if you’re looking to get started with testing.
+If you're looking to get started with testing, please visit [app.aragon.org](https://app.aragon.org/) and connect to the Goerli network.  You will see  DAOs for testing.
 
 To run tests, run these commands in your terminal:
 
