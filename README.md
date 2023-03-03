@@ -269,7 +269,7 @@ You can find more details about [our deployment checklist here](https://github.c
 
 Contract releases are tracked in [Releases.md](https://github.com/aragon/osx/blob/develop/packages/contracts/Releases.md).
 
-To review the changes in the repository, you can visit the `[CHANGELOG.md](http://CHANGELOG.md)` [here.](https://github.com/aragon/osx/blob/develop/packages/contracts/CHANGELOG.md)
+To review the changes in the repository, you can visit the `[CHANGELOG.md]` [here.](https://github.com/aragon/osx/blob/develop/packages/contracts/CHANGELOG.md)
 
 ## Automated testing
 
