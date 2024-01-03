@@ -1,0 +1,993 @@
+==============================================================
+Guild: Code4rena
+Channel: ARCHIVE-Q1-2023 / aragon-mar03
+==============================================================
+
+[03/01/2023 17:34] kartoonjoy (pinned)
+👋 Hello and welcome to the contest channel for the $90,500 USDC **Aragon Protocol** contest!
+
+📆 Contest opens 03/03/2023 20:00 (20:00 UTC) and runs through 03/10/2023 20:00 (20:00 UTC) (7 days).
+
+Please give a warm welcome to the Aragon Protocol team, particularly @Jordi M, @juar.eth, @Giorgi, @Michael, and @HaCk0, who will be available for questions either here in the channel or via DM.
+
+We'll be posting relevant links, documentation, etc. here, so if you intend to participate in this contest, consider enabling notifications for this channel. 🐺 ⏰
+
+Contest Page: https://code4rena.com/contests/2023-03-aragon-protocol-contest
+
+{Embed}
+https://code4rena.com/contests/2023-03-aragon-protocol-contest
+Code4rena Aragon Protocol contest
+$90,500 USDC
+3 March 2023—10 March 2023
+Code4rena - ARCHIVE-Q1-2023 - aragon-mar03 [1080521769632403558].txt_Files/c4-og-banner-0FCFA.png
+
+{Reactions}
+👋 (26) ✅ (5) 🫡 (7) 🦅 (2) ❤️‍🔥 
+
+[03/01/2023 18:07] ladboy233
+❤️‍🔥
+
+{Reactions}
+🔥 (2) 
+
+[03/01/2023 21:23] kodak_rome
+🚀🚀
+
+
+[03/02/2023 14:51] remaerd369
+🦾
+
+
+[03/02/2023 16:19] kartoonjoy
+Hi All 👋! Let's please limit conversation from this point.
+
+{Reactions}
+👍 (3) 🫡 (5) 
+
+[03/03/2023 12:07] kartoonjoy
+Pinned a message.
+
+
+[03/03/2023 15:31] carlitox477
+Any docs we can start digging into?
+
+
+[03/03/2023 20:34] kmanofficial
+Who can do this contest as it's another limited contest?
+
+
+[03/03/2023 20:34] kartoonjoy
+if you're in this channel, you can participate.
+
+
+[03/03/2023 20:35] kmanofficial
+Ah okay guess I just need to login with my wallet thanks
+
+{Reactions}
+hi5 
+
+[03/03/2023 21:11] chaindev
+where is the contract `PluginProcessor`?
+
+
+[03/03/2023 21:12] thepicodes (pinned)
+**Automated Findings**: https://gist.github.com/Picodes/16984274f6ad7b83b7a59f8b33cee6a6
+
+
+[03/03/2023 21:13] kartoonjoy (pinned)
+Wardens, please note that the automated findings output is posted below. These are considered publicly known issues and are not eligible for awards.
+
+**Automated findings: **
+https://gist.github.com/Picodes/16984274f6ad7b83b7a59f8b33cee6a6
+
+{Embed}
+https://gist.github.com/Picodes/16984274f6ad7b83b7a59f8b33cee6a6
+4naly3er-2023-03-aragon.md
+GitHub Gist: instantly share code, notes, and snippets.
+Code4rena - ARCHIVE-Q1-2023 - aragon-mar03 [1080521769632403558].txt_Files/gist-og-image-17482.png
+
+{Reactions}
+👍 (3) 
+
+[03/03/2023 21:19] kartoonjoy
+Pinned a message.
+
+
+[03/03/2023 21:20] kartoonjoy
+Pinned a message.
+
+
+[03/03/2023 21:27] saksham0290
+Any docs?
+
+
+[03/03/2023 21:48] .hack0 (pinned)
+Hi wardens
+Am am @HaCk0 one of the developers of the Aragon core contracts (Aragon OSx). Thanks for your efforts already and I am looking forward to nice and clever findings.
+The documentation can be found here: https://devs.aragon.org/docs/osx or on the staging environment (slightly newer) https://devs-stg.aragon.org/docs/osx
+To get fully up to date docs install the dependencies in the contracts package `packages/contracts` with `yarn` and then generated the documentation with `yarn run docgen`
+
+{Reactions}
+hi5 (7) 🤝 (2) 
+
+[03/03/2023 21:48] .hack0
+cc: @carlitox477 @sakshamguruji
+
+{Reactions}
+C4Keycap (3) 
+
+[03/03/2023 21:51] .hack0
+If you mean the `PluginSetupProcessor` responsible for plugin preparation and installation. You can find this contract here `packages/contracts/src/framework/plugin/setup/PluginSetupProcessor.sol`
+
+{Reactions}
+👍 
+
+[03/03/2023 21:51] itsmetechjay
+Pinned a message.
+
+
+[03/04/2023 06:05] bytes032
+@HaCk0 dm sent
+
+
+[03/04/2023 07:32] devabdee
+In scoping details it is written that test coverage is 60%. I just ran `npx hardhat coverage` and it showed some different results. Showing test coverage of more than 80%. That 60 is a typo? Anyone else ran hardhat coverage, what you are getting?
+wanted to confirm it bcz I'm getting a hardhat error, maybe this can be the reason it is showing me a different result? 
+```
+Error in plugin solidity-coverage: :x: 1 test(s) failed under coverage.
+HardhatPluginError: :x: 1 test(s) failed under coverage.
+```
+
+
+[03/04/2023 09:57] giorgi3661
+Yep, it is more than 80.  What error you are getting ?
+
+{Reactions}
+👍 
+
+[03/04/2023 10:12] devabdee
+ok. No then It's not a problem. Thanks for the clarification.
+
+{Reactions}
+✊ 
+
+[03/04/2023 10:50] .hack0
+accepted the friend request but no DM received
+
+
+[03/04/2023 10:58] t.nero
+For any who are confusing to set up the repo locally and running the test:
+1. clone the repo
+2. `yarn install` on the root directory (`/2023-03-aragon`)
+3. cd to `packages/contracts/`
+4. now you are ready to run `npx hardhat [command]`
+
+{Reactions}
+👍 (5) ✅ 
+
+[03/04/2023 12:17] golanger
+On the Code4arena site it says the contest is running for 6 days though?
+
+
+[03/04/2023 13:53] kartoonjoy
+There is a countdown of 6 days left as of now and total number of days = 7.
+
+{Reactions}
+👍 
+
+[03/04/2023 15:51] co0nan
+anyone managed to setup it on Foundry?
+
+
+[03/04/2023 15:53] securium
+hi guys
+
+
+[03/04/2023 15:53] securium
+who passes the contest from aragon protocol?
+where is the _canVote function located?
+
+
+[03/04/2023 15:53] securium
+in the MajorityVotingBase.sol contract
+I looked through all the imported contracts, and I can't find an implementation of this function, which is in the abstract contract MajorityVotingBase.sol
+
+
+[03/04/2023 15:53] securium
+
+
+{Attachments}
+Code4rena - ARCHIVE-Q1-2023 - aragon-mar03 [1080521769632403558].txt_Files/image-8B440.png
+
+
+[03/04/2023 15:55] co0nan
+/packages/contracts/src/plugins/governance/majority-voting/addresslist/AddresslistVoting.sol
+
+
+[03/04/2023 15:56] securium
+thank you, How did you find her so quickly?
+
+
+[03/04/2023 15:57] co0nan
+use `Find in files` in VSCode
+
+
+[03/04/2023 15:59] securium
+ctrl + shift + F?
+
+{Reactions}
+👍 
+
+[03/04/2023 16:01] co0nan
+yup, if it doesn't work for u, you can use the UI, click on edit -> find in files
+
+{Reactions}
+❤️ 
+
+[03/04/2023 18:49] fabienmorrow
+@HaCk0 Just for information I think there is some problem in the doc here :
+https://devs-stg.aragon.org/docs/osx/how-it-works/core/permissions/conditions#condition-1-checking-the-properties
+https://devs-stg.aragon.org/docs/osx/how-it-works/core/permissions/conditions#condition-1-adding-parameter-constraints
+
+Text is the same, code snippet too....
+
+I recommend classify this as a high finding
+
+{Embed}
+https://devs-stg.aragon.org/docs/osx/how-it-works/core/permissions/conditions
+Conditions | Aragon Developer Portal
+Permission Conditions
+
+
+[03/04/2023 19:26] ne0n239
+While using app.aragon.org and creating a DAO with it, what all plugins are associated with the DAO by default when creating?
+
+
+[03/04/2023 19:46] giorgi3661
+Hey. I dont get the question. If you use wallet based dao, it deploys dao and installs multisig right away. If you use token based, it deploys dao with token voting plugin installed
+
+
+[03/04/2023 19:49] ne0n239
+Ok. So these are the TokenVoting.sol and Multisig.sol, right? What is the Admin.sol plugin used for?
+
+
+[03/04/2023 19:50] giorgi3661
+Hey. What would make this high finding ? It is a typo in the docs that bears no risk at all.
+
+
+[03/04/2023 19:51] giorgi3661
+Well, if user wants none of those plugins, we will soon add an option to create dao with admin plugin where only he will have the power to do stuff on the dao without any proposals or whatever
+
+
+[03/04/2023 19:52] ne0n239
+Got it. Thanks for the info
+
+{Reactions}
+👌 
+
+[03/04/2023 19:53] brevist
+Hey @Giorgi ,
+You might need to make a small correction in the docs:
+
+https://devs-stg.aragon.org/docs/osx/how-to-guides/plugin-development/non-upgradeable-plugin/initialization
+
+```diff
+- Immutable variables can only be declared in the constructor.
++ Immutable variables can only be initialized in the constructor.
+```
+
+{Embed}
+https://devs-stg.aragon.org/docs/osx/how-to-guides/plugin-development/non-upgradeable-plugin/initialization
+Initialization | Aragon Developer Portal
+Initializing Non-upgradeable Plugins
+
+
+[03/04/2023 19:54] giorgi3661
+yep. Could be a valid point. ✊
+
+{Reactions}
+👍 
+
+[03/04/2023 20:01] chaduke3730
+I guess I have to pass this one, too busy recently, good luck to all
+
+
+[03/04/2023 20:23] brevist
+All the best, buddy!
+
+{Reactions}
+👍 
+
+[03/04/2023 20:57] fabienmorrow
+@Giorgi typo here
+https://devs-stg.aragon.org/docs/osx/how-it-works/framework/plugin-management/plugin-repo/#the-puginrepo-contract
+
+{Attachments}
+Code4rena - ARCHIVE-Q1-2023 - aragon-mar03 [1080521769632403558].txt_Files/image-3BCF2.png
+
+{Embed}
+https://devs-stg.aragon.org/docs/osx/how-it-works/framework/plugin-management/plugin-repo/
+Repositories | Aragon Developer Portal
+Plugin Repositories
+
+
+[03/04/2023 21:16] escrow1337
+did you set it up eventually bro?
+
+
+[03/04/2023 21:22] co0nan
+No I will try to setup locally on remix but have to figure out some arguments
+
+{Reactions}
+💯 
+
+[03/05/2023 00:40] .hack0
+what is the typo?
+
+
+[03/05/2023 05:10] 0xsalt#5798
+`PuginRepo`
+
+
+[03/05/2023 05:10] 0xsalt#5798
+Should be `PluginRepo`
+
+
+[03/05/2023 09:11] .hack0
+ahh thanjs
+
+{Reactions}
+💯 
+
+[03/05/2023 09:18] saksham0290
+typo again , thanks*
+
+
+[03/05/2023 09:20] .hack0
+lool
+
+
+[03/05/2023 10:35] fabienmorrow
+@HaCk0 @Giorgi  Can I know what node.js version you are using internally, and which packet manager (npm pnpm or yarn) do u use, to avoid loosing hours in node_modules related problems ?
+
+
+[03/05/2023 10:40] .hack0
+yarn and node 16
+
+
+[03/05/2023 11:58] co0nan
+@HaCk0  can you give me an example of `DAOSettings calldata _daoSettings, PluginSettings[] calldata _pluginSettings` for `createDao` function
+
+
+[03/05/2023 11:59] co0nan
+not sure what should I pass for _pluginSettings
+
+
+[03/05/2023 12:04] .hack0
+`_daoSettings`
+```json
+{
+  "daoURI": "0x00",
+  "metadata": "0x00",
+  "subdomain": "eagle",
+  "trustedForwarder": "0x0000000000000000000000000000000000000000"
+}
+```
+
+
+[03/05/2023 12:12] .hack0
+`_pluginSettings` consists of 2 parts:
+1. the plugin setup reference (aka `pluginSetupRef`)
+2. and the data that is passed to the plugin setup during preparation
+
+`_pluginSettings` for a multisig plugin:
+```json
+[{
+  "pluginSetupRef": {
+    "pluginSetupRepo": "0x9b32224935b6BFD17c92305166ce0919e77c8cd9",
+    "versionTag": {
+      "build": 1,
+      "release": 1
+    }
+  },
+  "data": "0x0000000000000000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001000000000000000000000000d92fe8b91ab9ec967ec4208eac1d4ea625cdff03"
+}]
+```
+
+to get the abi for the data part checkout the `build-metadata.json` file for the plugin you want to install (for the multisig plugin it would be `packages/contracts/src/plugins/governance/multisig/build-metadata.json`)
+there you see the `prepareInstallation` abi, which represents the abi used to decode the `_data` parameter of the function `prepareInstallation` in the corresponding plugin setup (for multisig the setup is `packages/contracts/src/plugins/governance/multisig/MultisigSetup.sol`)
+
+
+[03/05/2023 12:13] co0nan
+great! thanks
+
+
+[03/05/2023 12:13] .hack0
+np
+
+
+[03/05/2023 12:40] co0nan
+what is the difference between TokenVoting and AddressListVoting?
+
+
+[03/05/2023 12:56] .hack0
+token voting uses an erc20 token for membership control and address list a list of addresses
+
+
+[03/05/2023 13:06] co0nan
+so when we create a proposal on ERC20 it calls TokenVoting.createProposal, when does `createProposal` inside AddressListVoting get called?
+
+
+[03/05/2023 13:15] .hack0
+When you want to create a proposal call `createProposal` on either the TokenVotingPlugin or the AddresslistVotingPlugin.
+**TokenVoting**
+Depending on the settings either everyone or only token holder (addresses that hold a min. amount of the erc20 token configured for the TokenVotingPlugin) can create proposals. Calling `createProposal`
+Only token holder (addresses that hold a min. amount of the erc20 token configured for the TokenVotingPlugin) can vote on the created proposal with 1 Token = 1 Vote
+
+An example of an ERC20 token suitable for voting can be found here: `packages/contracts/src/token/ERC20/governance/GovernanceERC20.sol`
+
+**AddresslistVoting**
+Depending on the settings either everyone or only addresses in the memberlist can create proposals. Calling `createProposal`
+Only addresses in the memberlist can vote on the create proposal with 1 address = 1 vote
+
+For a deeper knowledge of the addresslist implementation I recommend reading the contract `packages/contracts/src/plugins/utils/Addresslist.sol`.
+
+{Reactions}
+thankyou 
+
+[03/05/2023 16:47] co0nan
+what should happen if the Voting Power is 50% yes vs 50% no and the Support threshold > 50%?
+
+
+[03/05/2023 18:19] giorgi3661
+Vote wont be executed.
+
+
+[03/05/2023 19:13] wtin
+Hi @Giorgi, i've sent you a dm, thank you
+
+{Reactions}
+🫡 
+
+[03/05/2023 20:56] ahmet5611
+@Giorgi DM'ed
+
+{Reactions}
+👌 
+
+[03/06/2023 07:25] devabdee
+In DAO.sol, users can deposit native tokens or any other tokens using function deposit(). But why users are going to do that? I mean where those funds are getting used? are those funds refundable? I can't find enough info about that in the docs or natspec. pls clarify
+
+
+[03/06/2023 08:25] .hack0
+a DAO is a decentrialized autonomous organisation. The idea is for a group of people to govern funds and do useful stuff with it
+https://en.wikipedia.org/wiki/Decentralized_autonomous_organization
+https://www.investopedia.com/tech/what-dao/
+
+
+[03/06/2023 08:48] 721orbit
+They can be utilized later in investment strategies
+
+{Reactions}
+👍 (2) ✅ 
+
+[03/06/2023 08:48] devabdee
+The reason I was asking that was because the function is not storing the deposited funds info on the storage. Like in struct. Why its not bothering to store info like what token the user deposited, how many etc? It just simply emits an event. How it will be used then? And are those funds refundable?
+
+
+[03/06/2023 08:50] .hack0
+> Why its not bothering to store info like what token the user deposited
+because an erc20 token can be transfered without the deposit function, thus the storage will always be wrong
+
+> How it will be used then?
+depends on the DAO how or where they wanna invest it
+
+> And are those funds refundable?
+depends on the DAO
+
+
+[03/06/2023 08:58] devabdee
+Alright thanks much helpful now
+
+
+[03/06/2023 09:05] 721orbit
+@HaCk0 i have dm'd you
+
+
+[03/06/2023 09:05] .hack0
+yep saw it.
+
+
+[03/06/2023 09:32] rvi5470
+in the `MULTISIG` dao executes addAddresses right?
+
+
+[03/06/2023 10:02] .hack0
+or somebody that has the permission to do it
+
+{Reactions}
+✅ 
+
+[03/06/2023 10:25] ne0n239
+@HaCk0  Dm'ed u
+
+
+[03/06/2023 10:28] 0xsurena
+where i can see code related to the proposal state ? @HaCk0 🙏
+
+
+[03/06/2023 10:31] brevist
+Hey @HaCk0 ,
+It looks like the page https://devs.aragon.org/docs/osx/how-it-works/core/permissions/conditions needs some fine-tuning.
+
+{Attachments}
+Code4rena - ARCHIVE-Q1-2023 - aragon-mar03 [1080521769632403558].txt_Files/docs-DC72C.jpg
+
+{Embed}
+https://devs.aragon.org/docs/osx/how-it-works/core/permissions/conditions
+Conditions | Aragon Developer Portal
+Permission Conditions
+
+
+[03/06/2023 10:34] .hack0
+`packages/contracts/src/plugins/governance/majority-voting/MajorityVotingBase.sol`
+
+{Reactions}
+👍 
+
+[03/06/2023 10:34] .hack0
+ok thanks
+
+{Reactions}
+👍 
+
+[03/06/2023 11:08] sinarette
+@HaCk0 may I dm you
+
+
+[03/06/2023 11:55] jauvany
+How do you start auditing 62 smart contracts in a go, this contest is scary someone ready to teamup?
+
+
+[03/06/2023 12:02] kartoonjoy
+Wardens, also welcome @Michael from the sponsor team.
+
+{Reactions}
+👋 (7) 
+
+[03/06/2023 12:30] jauvany
+Welcome @Michael
+
+{Reactions}
+👋 
+
+[03/06/2023 12:48] dadekuma
+are all plugins in `packages/contracts/src/plugins` in scope?
+
+
+[03/06/2023 12:55] .hack0
+yes
+
+{Attachments}
+Code4rena - ARCHIVE-Q1-2023 - aragon-mar03 [1080521769632403558].txt_Files/image-448C3.png
+
+{Reactions}
+👍 (3) 
+
+[03/06/2023 13:10] lopotras
+@HaCk0
+Typo here:
+https://devs.aragon.org/docs/osx/how-it-works/core/plugins/plugin-details
+
+Last sentence seems to be missing a "be"
+
+```
+- Finally, the Aragon OSx protocol manages the registry in which the plugin repositories are listed, which is to required to install a plugin using the Aragon OSx framework infrastructure to your DAO.
++ Finally, the Aragon OSx protocol manages the registry in which the plugin repositories are listed, which is to be required to install a plugin using the Aragon OSx framework infrastructure to your DAO.
+```
+
+{Embed}
+https://devs.aragon.org/docs/osx/how-it-works/core/plugins/plugin-details
+Details | Aragon Developer Portal
+Understanding Plugins
+
+
+[03/06/2023 13:21] .hack0
+thanks
+
+
+[03/06/2023 15:04] 0x24e
+Hey family any previous audit has done before ?
+
+{Reactions}
+☝️ 
+
+[03/06/2023 16:46] chaindev
+finding spelling mistake is also valuable?
+
+
+[03/06/2023 17:07] devabdee
+No not really. If you find them in the codebase (including natspec comments) then you can put them in the QA report as Informational findings. But don't expect any payout
+
+{Reactions}
+thankyou 👍 
+
+[03/06/2023 17:07] kartoonjoy
+it can maybe be added to a QA report but on the whole, misspellings wont be particularly valuable for you.
+
+{Reactions}
+☝️ 👍 
+
+[03/06/2023 18:54] 0xsurena
+Hi again 🙂 every created DAO has it’s own dedicated erc20 vote token ? 🙏🌹
+
+
+[03/06/2023 19:08] .hack0
+`prepareInstallation()` in `packages/contracts/src/plugins/governance/majority-voting/token/TokenVotingSetup.sol` defines the behaviour
+
+{Reactions}
+👍 
+
+[03/06/2023 20:58] 0x24e
+I will assume no answer for that
+
+
+[03/06/2023 21:02] kartoonjoy
+Are you asking the sponsor whether their code base has been audited previously?
+
+
+[03/06/2023 22:22] adriro
+@HaCk0 can I dm?
+
+
+[03/06/2023 22:22] .hack0
+sure
+
+
+[03/07/2023 02:15] t.nero
+I would like to know that too, if any.
+
+{Reactions}
+☝️ 
+
+[03/07/2023 08:13] mheuer
+https://github.com/aragon/osx#audit
+
+{Reactions}
+❤️ 
+
+[03/07/2023 08:32] 0x24e
+Thank you fam
+
+
+[03/07/2023 08:35] mheuer
+I would take the closest look on the most difficult part: the `PluginSetupProcessor` and its two-step setup process (https://devs.aragon.org/docs/osx/how-it-works/framework/plugin-management/plugin-setup/).
+
+First, it allows people to `prepare` an installation/update/uninstallation and request a list of permission operations (from/to the dao, plugin or other contract or wallet addresses). 
+
+Second, the DAO calls `PluginSetupProcessor` for it to `apply` this list of permission operations. This commonly happens through a governance process (i.e., a proposal is created in, let's say, the TokenVoting plugin, and people have to agree to install/update/uninstall the plugin).
+
+The first step gives DAO builders/auditors/tech-savy members time to review/audit the 
+- plugin implementation 
+- plugin setup contract 
+- all other, associated contracts (that receive permissions or have access on the previous two).
+
+The security concept is to create certainty/predictability that the permissions that were `prepared` are exactly the permissions that are `applied`. To assure this, a lot of hashing takes place in the `PluginSetupProcessor` (PSP).
+If you would find ways / circumstances in which permissions can be applied that differ from those that were prepared / announced, that would certainly be an important finding.
+
+{Reactions}
+👍🏼 (2) 🙌 (4) 
+
+[03/07/2023 08:37] mheuer
+Note, that we are aware of metamorphic contracts that can change their bytecode (https://a16zcrypto.com/content/article/metamorphic-smart-contract-detector-tool/).
+We expect that tooling is applied to untrusted plugin sources to check if the plugin setup or plugin implementation is metamorphic.
+
+
+[03/09/2023 21:44] 0xthec0der
+This is probably the cleanest codebase I've ever seen. 👍
+
+{Reactions}
+❤️ (6) 👍 (2) 
+
+[03/09/2023 22:33] kaden3328
+presumably everything on this page is considered a known issue? https://devs.aragon.org/docs/osx/how-it-works/framework/plugin-management/plugin-setup/security-risk-mitigation
+
+{Embed}
+https://devs.aragon.org/docs/osx/how-it-works/framework/plugin-management/plugin-setup/security-risk-mitigation
+Security | Aragon Developer Portal
+Risks and Their Mitigation
+
+
+[03/10/2023 00:01] acegawd
+Who's available? @Jordi M @juar.eth @Giorgi @Michael @HaCk0 ?
+
+
+[03/10/2023 00:02] giorgi3661
+Ofc. We are aware of all those
+
+
+[03/10/2023 00:03] giorgi3661
+Shoot
+
+
+[03/10/2023 07:34] fabienmorrow
+really impressed too...
+
+{Reactions}
+💗 
+
+[03/10/2023 14:43] minh___
+how are root permissions given to the PluginSetupProcessor when installing a plugin outside of the initial creation with DAOFactory?
+
+
+[03/10/2023 16:32] .hack0
+our SDK adds as a first and last action to grant and then revoke the root permissions from the PSP.
+soo the actions array would look like this:
+1. Grant root to PSP
+2. Call applyInstallation on PSP
+3. Revoke root from PSP
+
+{Reactions}
+👍 
+
+[03/10/2023 16:35] minh___
+had a feeling it would be something like that, because I couldnt see it anywhere in the code. thanks for clarifying 👍
+
+
+[03/10/2023 20:02] C4
+**🚨 CONTEST ALERT**
+
+@🐺wardens The **Aragon Protocol** contest is now closed! Huge thanks to everyone who participated 🔍, whether you submitted a finding or not.
+
+What's next: The sponsor team and judge will review the findings over the next couple of weeks. Keep an eye on #📢announcements for regular updates on how the contest is progressing through awarding 🤑🏆, judging 🧑‍⚖️ and reporting 📜. Feel free to ping a gardener if you have questions along the way!
+
+
+[03/10/2023 20:10] adriro
+really solid codebase 👏 . I liked how you tamed complexity by splitting functionality into multiple contracts
+
+{Reactions}
+❤️ (11) 
+
+[03/10/2023 20:18] giorgi3661
+Thanks everyone for the questions 🫡 . Hope you also gained good knowledge ! ✊
+
+{Reactions}
+💯 (6) 
+
+[03/29/2023 13:36] itsmetechjay
+:code4rena: 💸 🎉 Awards for **Aragon Protocol**:
+
+$17,746.25 USDC » @carlitox477 
+$17,746.25 USDC » @adriro 
+$8,058.25 USDC » V_B (@Vlad B | zkSync, @Barichek)
+$7,985.81 USDC » @0x52 
+$6,215.37 USDC » @AkshaySrivastav 
+$6,142.93 USDC » @0xWeiss 
+$1,295.53 USDC » @Sathish9098 
+$1,295.53 USDC » @descharre 
+$936.45 USDC » @rbserver 
+$774.31 USDC » @Rolezn 
+$774.31 USDC » @0xSmartContract  
+$774.31 USDC » matrix_0wl
+$747.74 USDC » @JCN 
+$720.35 USDC » @0xAgro 
+$720.35 USDC » @DevABDee 
+$647.62 USDC » @0x6980 
+$575.19 USDC » @ReyAdmirado 
+$126.40 USDC » @0xnev  
+$126.40 USDC » @RaymondFam 
+$126.40 USDC » @yongskiws 
+$72.43 USDC » @tsar 
+$72.43 USDC » @0xSurena 
+$72.43 USDC » @tnevler 
+$72.43 USDC » @0xmichalis 
+$72.43 USDC » @arialblack14 
+$72.43 USDC » @luxartvinsec 
+$72.43 USDC » @0xsomeone 
+$72.43 USDC » @lukris02 
+$72.43 USDC » @banky 
+$72.43 USDC » @iceBear 
+$72.43 USDC » @codeislight 
+$72.43 USDC » @imare 
+$72.43 USDC » @brgltd 
+$72.43 USDC » @sakshamguruji 
+$72.43 USDC » @chrisdior4 
+$53.96 USDC » @Madalad 
+$53.96 USDC » @saneryee 
+$53.96 USDC » @Denis 
+$53.96 USDC » @volodya 
+$53.96 USDC » @atharvasama 
+$53.96 USDC » @hunter_w3b 
+$53.96 USDC » @Rageur
+
+🏁 Findings summary
+---------------------------
+High risk findings: 0 
+Med risk findings: 6 total, 4 unique
+Gas reports: 18 
+QA reports: 29 
+
+Awards will be distributed on Polygon within the next week. Congratulations, everyone! 💸 💸 💸
+
+*Note: If you participated in this contest and don’t see your name on this list, please wait until the report is published and the findings repo is made public to check on your submissions.*
+
+{Reactions}
+🎉 (5) ❤️‍🔥 
+
+[03/29/2023 13:40] sathish9098kumar
+My first big reward 😀
+
+{Reactions}
+hi5 (5) 🎉 (7) 
+
+[03/29/2023 13:43] 0xweiss
+Yessss 6k let's goo
+
+{Reactions}
+hi5 (4) 🎉 (5) 
+
+[03/29/2023 13:52] ladboy233
+I did not do any of the contest in March. But congrats everyone! Wow the top 5 always changing! @carlitox477
+
+{Reactions}
+🔥 (3) 
+
+[03/29/2023 13:52] ladboy233
+https://tenor.com/view/hasbulla-money-gif-25191018
+
+{Embed}
+https://tenor.com/view/hasbulla-money-gif-25191018
+Code4rena - ARCHIVE-Q1-2023 - aragon-mar03 [1080521769632403558].txt_Files/hasbulla-money-655AB.png
+
+{Reactions}
+😂 (4) 
+
+[03/29/2023 13:54] 0xweiss
+Congrats @carlitox477 @adriro , waiting to see what were your findings 🔥
+
+
+[03/29/2023 14:12] carlitox477
+2nd medium unique finding, first 5 figures, first 5 figures in one singles contest, shared first position (for first time). And on top of that,my first contest since I came back from holidays. Congrats to @adriro for the shared first position, and to the rest of the participants in this contest!
+
+{Reactions}
+Clap (19) cheers_badger (4) praisethesun (5) 
+
+[03/29/2023 14:14] carlitox477
+To the guys of Aragon, a really solid code!
+
+{Reactions}
+chefskiss (5) astrobadger (3) 
+
+[03/29/2023 14:19] .hack0
+thanks 🙂
+
+
+[03/29/2023 14:29] hunter_w3b
+congrats to everyone 🎉
+
+{Reactions}
+❤️ 
+
+[03/29/2023 14:32] devabdee
+Alhumdulilah 🙂❤️‍🔥  Time to do some Eid Shopping xD
+Congrats Everyone.
+
+{Reactions}
+🎉 (3) 🔥 (2) 
+
+[03/29/2023 15:07] gjaldon
+Congrats and awesome win, Carlito! 🔥🎉 How many Hs and Ms did you find for this?
+
+
+[03/29/2023 17:44] carlitox477
+1 med unique
+
+{Reactions}
+🔥 (7) 
+
+[03/29/2023 17:45] eme0242
+just that??
+
+
+[03/29/2023 17:47] loserdavictor
+unique : )
+
+
+[03/29/2023 17:48] devabdee
+There were no High findings. So in that case unique Ms gets the best deal
+
+
+[03/29/2023 17:48] eme0242
+Ohh.. right!
+
+
+[03/29/2023 17:48] devabdee
+And sometimes even Unique Ms gets paid more than dup H
+
+
+[03/29/2023 17:50] gjaldon
+Awesome 🙂
+
+
+[03/29/2023 17:50] carlitox477
+
+
+{Attachments}
+Code4rena - ARCHIVE-Q1-2023 - aragon-mar03 [1080521769632403558].txt_Files/image0-50D07.gif
+
+
+[03/29/2023 17:52] carlitox477
+If you see the field that was added to the leaderboard the findings were just 4, all of them medium
+
+
+[03/29/2023 17:52] devabdee
+Looks like, You didn't focused on the QA and Gas report at all. Right?
+
+
+[03/29/2023 17:53] carlitox477
+No, I usually do, but the codebase was so solid that I did not give it a shot. No I regret a little about that, BC it would mean a solo first position, but the money is ok 😂
+
+
+[03/29/2023 17:54] devabdee
+Oh nice. Don't you think that helped you in finding the unique M?
+
+
+[03/29/2023 17:55] carlitox477
+Good knowledge of the basis, a little experience too. I can't tell much more given that the report is not public yet
+
+
+[03/29/2023 17:56] devabdee
+Alright. Thanks for answering. Good job mate
+
+
+[03/29/2023 21:23] codeislight
+Congrats everyone! 🎊
+
+{Reactions}
+🎉 (3) 
+
+[03/30/2023 04:47] akshaysrivastav
+Each of the top 6 wardens only found a single 'M' issue.
+
+{Reactions}
+❤️ (6) 
+
+[04/01/2023 07:59] 0xffchain
+How do you get this information?
+
+
+[04/01/2023 08:48] akshaysrivastav
++backstage role
+
+
+[04/01/2023 08:48] 0xffchain
+Oh,
+
+
+[04/01/2023 08:49] 0xffchain
+How does one qualify for such?
+
+
+[04/01/2023 09:51] deekshith09
+https://docs.code4rena.com/roles/certified-contributors/backstage-wardens
+
+{Embed}
+https://docs.code4rena.com/roles/certified-contributors/backstage-wardens
++Backstage wardens
+
+
+[04/02/2023 16:30] fabienmorrow
+do we have an idea when the report will be published ?
+
+{Reactions}
+👍 (3) 
+
+[05/13/2023 20:23] fabienmorrow
+bump. It's quite long :/
+
+{Reactions}
+😂 
+
+==============================================================
+Exported 159 message(s)
+==============================================================
